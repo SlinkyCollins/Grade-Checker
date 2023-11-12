@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade checker</title>
+    <link rel="stylesheet" href="GradeChecker.css">
+</head>
+<body>
+        <div class="container">
+            <div class="content-container">
+                <p><i>Welcome to the Official Grading Page</i></p>
+                <h1>Grading System</h1>
+                <div class="wrapper">
+                    <input type="number" placeholder="Enter your score" id="userInput">
+                    <button onclick="checkNumber()" type="button">Check</button>
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+
+
+
+  <script>
+       var songFirst = new Audio("/Sounds/Are-you-playing.mp3")
+       var songSecond = new Audio("/Sounds/yee-yee-yeeee-sound-effect.mp3")
+       var songThird = new Audio("/Sounds/Eweeh-sound-effects.mp3")
+       var songFourth = new Audio("/Sounds/sorry.mp3")
+       var songFifth = new Audio("/Sounds/There-Is-God-O.mp3")
+       var songSixth = new Audio("/Sounds/Na-Only-You-Waka-Come.mp3")
+       var songSeven = new Audio("/Sounds/I-want-to-be-President.mp3")
+     function checkNumber() {
+        var inp = userInput.value
+        if (inp == "") {
+            result.innerHTML = "Alaye, enter something jhare🤨"
+            songFirst.play();
+        }
+        else if (inp >= 0 && inp < 40 ) {
+            // alert("Fail");
+            result.innerHTML = "Fail🥴"
+            songSecond.play();
+        } else if (inp >= 40 && inp < 45) {
+            // alert("Pass");
+            result.innerHTML = "Pass😒"
+            songThird.play();
+        } else if (inp >= 45 && inp < 50) {
+            // alert("Average");
+            result.innerHTML = "Average🙃"
+            songFourth.play();
+        } else if (inp >= 50 && inp < 60) {
+            // alert("Credit");
+            result.innerHTML = "Credit😜"
+            songFifth.play();
+        } else if (inp >= 60 && inp < 70) {
+            // alert("Good");
+            result.innerHTML = "Good😊"
+            songSixth.play();
+        } else if (inp >= 70 && inp <= 100) {
+            // alert("Excellent");
+            result.innerHTML = "Excellent🤩"
+            songSeven.play();
+        } else {
+            result.innerHTML = "Invalid Number"
+        }
+    }
+   </script>
+</body>
+</html>
